@@ -2256,7 +2256,7 @@
       "regularWinPercentage": 0,
       "runnerRunnerWinPercentage": 5.95959595959596,
       "regularOutsDescription": "No regular outs available",
-      "runnerRunnerDescription": "Every 5+6(Two Pair), Every 6+6, 5+5(Three of a Kind), 45 combinations(Straight)"
+      "runnerRunnerDescription": "Every 5+6(Two Pair), Every 6+6, 5+5(Three of a Kind), Every 2+3, 3+7, 7+8(Straight)"
     },
     {
       "playerId": "player2",

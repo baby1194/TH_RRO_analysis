@@ -483,12 +483,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size > 0) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Four of a Kind)`;
-    }
-
-    return `${cards.length} cards(Four of a Kind)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Four of a Kind)`;
   }
 
   static describeFullHouse(cards, rankCounts) {
@@ -500,12 +496,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size > 0 && neededRanks.size <= 5) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Full House)`;
-    }
-
-    return `${cards.length} cards(Full House)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Full House)`;
   }
 
   static describeFlush(cards, suitCounts) {
@@ -517,18 +509,14 @@ class RegularOutsDescriber {
       neededSuits.add(suit);
     });
 
-    if (neededSuits.size > 0 && neededSuits.size <= 2) {
-      const suits = Array.from(neededSuits);
-      const descriptions = [];
+    const suits = Array.from(neededSuits);
+    const descriptions = [];
 
-      for (const suit of suits) {
-        descriptions.push(`Any ${suit}(Flush)`);
-      }
-
-      return descriptions.join(", ");
+    for (const suit of suits) {
+      descriptions.push(`Any ${suit}(Flush)`);
     }
 
-    return `${cards.length} cards(Flush)`;
+    return descriptions.join(", ");
   }
 
   static describeStraight(cards) {
@@ -540,12 +528,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size <= 5) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Straight)`;
-    }
-
-    return `${cards.length} cards(Straight)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Straight)`;
   }
 
   static describeThreeOfAKind(cards, rankCounts) {
@@ -564,12 +548,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size > 0) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Three of a Kind)`;
-    }
-
-    return `${cards.length} cards(Three of a Kind)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Three of a Kind)`;
   }
 
   static describeTwoPair(cards, rankCounts) {
@@ -581,12 +561,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size > 0 && neededRanks.size <= 5) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Two Pair)`;
-    }
-
-    return `${cards.length} cards(Two Pair)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Two Pair)`;
   }
 
   static describePair(cards, rankCounts) {
@@ -598,12 +574,8 @@ class RegularOutsDescriber {
       neededRanks.add(rank);
     });
 
-    if (neededRanks.size > 0) {
-      const ranks = Array.from(neededRanks);
-      return `Any ${ranks.join(", ")}(Pair)`;
-    }
-
-    return `${cards.length} cards(Pair)`;
+    const ranks = Array.from(neededRanks);
+    return `Any ${ranks.join(", ")}(Pair)`;
   }
 }
 
@@ -832,7 +804,16 @@ class RunnerRunnerDescriber {
       return `Every ${ranks.join(", ")}(Four of a Kind)`;
     }
 
-    return `${combinations.length} combinations(Four of a Kind)`;
+    // If no matching pairs found, show all combinations
+    const allCombinations = Array.from(
+      new Set(
+        combinations.map((combo) => {
+          const parts = combo.split("+");
+          return `${parts[0].replace(/[♠♥♦♣]/, "")}+${parts[1].replace(/[♠♥♦♣]/, "")}`;
+        })
+      )
+    );
+    return `Every ${allCombinations.join(", ")}(Four of a Kind)`;
   }
 
   static describeFullHouse(combinations, rankCounts) {
@@ -854,18 +835,14 @@ class RunnerRunnerDescriber {
     });
 
     const descriptions = [];
-    if (neededPairs.size > 0 && neededPairs.size <= 5) {
+    if (neededPairs.size > 0) {
       const pairs = Array.from(neededPairs).map((rank) => `${rank}+${rank}`);
       descriptions.push(`Every ${pairs.join(", ")}(Full House)`);
     }
-    if (neededSingles.size > 0 && neededSingles.size <= 5) {
+    if (neededSingles.size > 0) {
       descriptions.push(
         `Every ${Array.from(neededSingles).join(", ")}(Full House)`
       );
-    }
-
-    if (descriptions.length === 0) {
-      return `${combinations.length} combinations(Full House)`;
     }
 
     return descriptions.join(", ");
@@ -892,7 +869,7 @@ class RunnerRunnerDescriber {
       }
     });
 
-    if (neededSuits.size > 0 && neededSuits.size <= 2) {
+    if (neededSuits.size > 0) {
       const suits = Array.from(neededSuits);
       const descriptions = [];
 
@@ -916,7 +893,16 @@ class RunnerRunnerDescriber {
       return descriptions.join(", ");
     }
 
-    return `${combinations.length} combinations(Flush)`;
+    // If not same suit, list all specific combinations
+    const allCombinations = Array.from(
+      new Set(
+        combinations.map((combo) => {
+          const parts = combo.split("+");
+          return `${parts[0]}+${parts[1]}`;
+        })
+      )
+    );
+    return `Every ${allCombinations.join(", ")}(Flush)`;
   }
 
   static findFlushExceptions(
@@ -1019,11 +1005,8 @@ class RunnerRunnerDescriber {
       neededCombinations.add(`${turnRank}+${riverRank}`);
     });
 
-    if (neededCombinations.size <= 2) {
-      return `Every ${Array.from(neededCombinations).join(", ")}(Straight)`;
-    }
-
-    return `${combinations.length} combinations(Straight)`;
+    // Always show all combinations, regardless of count
+    return `Every ${Array.from(neededCombinations).join(", ")}(Straight)`;
   }
 
   static describeThreeOfAKind(combinations, rankCounts) {
@@ -1052,7 +1035,16 @@ class RunnerRunnerDescriber {
       return `Every ${ranks.join(", ")}(Three of a Kind)`;
     }
 
-    return `${combinations.length} combinations(Three of a Kind)`;
+    // If no matching pairs found, show all combinations
+    const allCombinations = Array.from(
+      new Set(
+        combinations.map((combo) => {
+          const parts = combo.split("+");
+          return `${parts[0].replace(/[♠♥♦♣]/, "")}+${parts[1].replace(/[♠♥♦♣]/, "")}`;
+        })
+      )
+    );
+    return `Every ${allCombinations.join(", ")}(Three of a Kind)`;
   }
 
   static describeTwoPair(combinations, rankCounts) {
@@ -1074,18 +1066,14 @@ class RunnerRunnerDescriber {
     });
 
     const descriptions = [];
-    if (neededPairs.size > 0 && neededPairs.size <= 5) {
+    if (neededPairs.size > 0) {
       const pairs = Array.from(neededPairs).map((rank) => `${rank}+${rank}`);
       descriptions.push(`Every ${pairs.join(", ")}(Two Pair)`);
     }
-    if (neededSingles.size > 0 && neededSingles.size <= 5) {
+    if (neededSingles.size > 0) {
       descriptions.push(
         `Every ${Array.from(neededSingles).join(", ")}(Two Pair)`
       );
-    }
-
-    if (descriptions.length === 0) {
-      return `${combinations.length} combinations(Two Pair)`;
     }
 
     return descriptions.join(", ");
@@ -1109,7 +1097,16 @@ class RunnerRunnerDescriber {
       return `Every ${ranks.join(", ")}(Pair)`;
     }
 
-    return `${combinations.length} combinations(Pair)`;
+    // If no matching pairs found, show all combinations
+    const allCombinations = Array.from(
+      new Set(
+        combinations.map((combo) => {
+          const parts = combo.split("+");
+          return `${parts[0].replace(/[♠♥♦♣]/, "")}+${parts[1].replace(/[♠♥♦♣]/, "")}`;
+        })
+      )
+    );
+    return `Every ${allCombinations.join(", ")}(Pair)`;
   }
 }
 
