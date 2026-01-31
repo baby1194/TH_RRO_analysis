@@ -1,0 +1,18 @@
+{
+  "boardStage": "preflop",
+  "monteCarloIterations": 10000,
+  "totalSimulations": 10000,
+  "tieCount": 134,
+  "playerResults": [
+    {
+      "playerId": "player1",
+      "winCount": 3728,
+      "winPercentage": 37.28
+    },
+    {
+      "playerId": "player2",
+      "winCount": 6138,
+      "winPercentage": 61.38
+    }
+  ]
+}

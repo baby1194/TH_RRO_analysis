@@ -1,0 +1,2273 @@
+{
+  "boardStage": "flop",
+  "totalCombinations": 990,
+  "totalTurnCombinations": 45,
+  "tieCount": 0,
+  "playerResults": [
+    {
+      "playerId": "player1",
+      "regularOuts": [],
+      "runnerRunnerOuts": [
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "2",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "2",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "2",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "spade"
+              },
+              {
+                "rank": "5",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 61211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "spade"
+              },
+              {
+                "rank": "5",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "spade"
+              },
+              {
+                "rank": "5",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 61211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "spade"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "8",
+                "suit": "spade"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "8",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "8",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "spade"
+              },
+              {
+                "rank": "8",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "spade"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "spade"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 51211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 51211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "6",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "heart"
+              },
+              {
+                "rank": "6",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 61211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "heart"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "heart"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "heart"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "diamond"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "2",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "2",
+                "suit": "diamond"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "2",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              },
+              {
+                "rank": "2",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 6
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "3",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "3",
+                "suit": "diamond"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "5",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "J",
+                "suit": "club"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "diamond"
+              },
+              {
+                "rank": "5",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 4,
+              "value": 51211
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "5",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "6",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "Q",
+                "suit": "heart"
+              },
+              {
+                "rank": "5",
+                "suit": "diamond"
+              },
+              {
+                "rank": "6",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 3,
+              "value": 60512
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "diamond"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              },
+              {
+                "rank": "8",
+                "suit": "diamond"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "3",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              },
+              {
+                "rank": "3",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 7
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "7",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "8",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "7",
+                "suit": "diamond"
+              },
+              {
+                "rank": "8",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        },
+        {
+          "turn": {
+            "rank": "8",
+            "suit": "diamond"
+          },
+          "river": {
+            "rank": "7",
+            "suit": "club"
+          },
+          "hand": {
+            "cards": [
+              {
+                "rank": "5",
+                "suit": "spade"
+              },
+              {
+                "rank": "6",
+                "suit": "diamond"
+              },
+              {
+                "rank": "4",
+                "suit": "heart"
+              },
+              {
+                "rank": "8",
+                "suit": "diamond"
+              },
+              {
+                "rank": "7",
+                "suit": "club"
+              }
+            ],
+            "rank": {
+              "ranking": 5,
+              "value": 8
+            }
+          }
+        }
+      ],
+      "regularWinCount": 0,
+      "runnerRunnerWinCount": 59,
+      "regularWinPercentage": 0,
+      "runnerRunnerWinPercentage": 5.95959595959596,
+      "regularOutsDescription": "No regular outs available",
+      "runnerRunnerDescription": "Every 5+6(Two Pair), Every 6+6, 5+5(Three of a Kind), 45 combinations(Straight)"
+    },
+    {
+      "playerId": "player2",
+      "regularOuts": [],
+      "runnerRunnerOuts": [],
+      "regularWinCount": 45,
+      "runnerRunnerWinCount": 931,
+      "regularWinPercentage": 100,
+      "runnerRunnerWinPercentage": 94.04040404040404,
+      "regularOutsDescription": "Current winner - no regular outs needed",
+      "runnerRunnerDescription": "Current winner - no runner-runner outs needed"
+    }
+  ]
+}
