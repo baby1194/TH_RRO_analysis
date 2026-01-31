@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texas Hold'em Analyzer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+      }
+
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+      }
+
+      .section-title {
+        font-size: 1.4em;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .card-input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .card-input {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        background: white;
+        padding: 10px;
+        border-radius: 6px;
+        border: 2px solid #ddd;
+      }
+
+      .card-input label {
+        font-weight: 600;
+        color: #555;
+        min-width: 60px;
+      }
+
+      select,
+      input {
+        padding: 8px 12px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+      }
+
+      select:focus,
+      input:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      .player-section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: white;
+        border-radius: 6px;
+        border: 2px solid #e0e0e0;
+      }
+
+      .player-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .player-title {
+        font-weight: 600;
+        color: #333;
+        font-size: 1.1em;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn-primary {
+        background: #667eea;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #5568d3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-secondary {
+        background: #28a745;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #218838;
+      }
+
+      .btn-danger {
+        background: #dc3545;
+        color: white;
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      .btn-danger:hover {
+        background: #c82333;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .results {
+        margin-top: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #28a745;
+      }
+
+      .results-title {
+        font-size: 1.4em;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .json-output {
+        background: #2d2d2d;
+        color: #f8f8f2;
+        padding: 20px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+        line-height: 1.6;
+        max-height: 600px;
+        overflow-y: auto;
+      }
+
+      .error {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #f5c6cb;
+        margin-top: 15px;
+      }
+
+      .info-box {
+        background: #d1ecf1;
+        color: #0c5460;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #bee5eb;
+        margin-bottom: 20px;
+      }
+
+      .suit-symbol {
+        font-size: 1.2em;
+        margin-left: 5px;
+      }
+
+      .spade {
+        color: #000;
+      }
+      .heart {
+        color: #e74c3c;
+      }
+      .diamond {
+        color: #e74c3c;
+      }
+      .club {
+        color: #000;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        h1 {
+          font-size: 1.8em;
+        }
+
+        .card-input-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>♠ Texas Hold'em Analyzer ♥</h1>
+      <p class="subtitle">
+        Analyze outs and win probabilities for any poker situation
+      </p>
+
+      <form id="analyzerForm">
+        <!-- Board State Section -->
+        <div class="section">
+          <div class="section-title">Board State (Flop/Turn)</div>
+          <div id="boardCards">
+            <div class="card-input-group">
+              <div class="card-input">
+                <label>Card 1:</label>
+                <select class="board-rank" required>
+                  <option value="">Rank</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="J">J</option>
+                  <option value="Q">Q</option>
+                  <option value="K">K</option>
+                  <option value="A">A</option>
+                </select>
+                <select class="board-suit" required>
+                  <option value="">Suit</option>
+                  <option value="spade">♠ Spade</option>
+                  <option value="heart">♥ Heart</option>
+                  <option value="diamond">♦ Diamond</option>
+                  <option value="club">♣ Club</option>
+                </select>
+              </div>
+
+              <div class="card-input">
+                <label>Card 2:</label>
+                <select class="board-rank" required>
+                  <option value="">Rank</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="J">J</option>
+                  <option value="Q">Q</option>
+                  <option value="K">K</option>
+                  <option value="A">A</option>
+                </select>
+                <select class="board-suit" required>
+                  <option value="">Suit</option>
+                  <option value="spade">♠ Spade</option>
+                  <option value="heart">♥ Heart</option>
+                  <option value="diamond">♦ Diamond</option>
+                  <option value="club">♣ Club</option>
+                </select>
+              </div>
+
+              <div class="card-input">
+                <label>Card 3:</label>
+                <select class="board-rank" required>
+                  <option value="">Rank</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="J">J</option>
+                  <option value="Q">Q</option>
+                  <option value="K">K</option>
+                  <option value="A">A</option>
+                </select>
+                <select class="board-suit" required>
+                  <option value="">Suit</option>
+                  <option value="spade">♠ Spade</option>
+                  <option value="heart">♥ Heart</option>
+                  <option value="diamond">♦ Diamond</option>
+                  <option value="club">♣ Club</option>
+                </select>
+              </div>
+
+              <div class="card-input">
+                <label>Card 4:</label>
+                <select class="board-rank">
+                  <option value="">Rank</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="J">J</option>
+                  <option value="Q">Q</option>
+                  <option value="K">K</option>
+                  <option value="A">A</option>
+                </select>
+                <select class="board-suit">
+                  <option value="">Suit</option>
+                  <option value="spade">♠ Spade</option>
+                  <option value="heart">♥ Heart</option>
+                  <option value="diamond">♦ Diamond</option>
+                  <option value="club">♣ Club</option>
+                </select>
+                <small style="color: #666"
+                  >(Optional - for Turn analysis)</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Players Section -->
+        <div class="section">
+          <div class="section-title">Players</div>
+          <div id="playersContainer">
+            <!-- Player 1 -->
+            <div class="player-section" data-player="1">
+              <div class="player-header">
+                <span class="player-title">Player 1</span>
+              </div>
+              <div class="card-input-group">
+                <input
+                  type="text"
+                  class="player-id"
+                  placeholder="Player ID"
+                  value="player1"
+                  required
+                  style="width: 150px"
+                />
+
+                <div class="card-input">
+                  <label>Card 1:</label>
+                  <select class="player-rank-1" required>
+                    <option value="">Rank</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="J">J</option>
+                    <option value="Q">Q</option>
+                    <option value="K">K</option>
+                    <option value="A">A</option>
+                  </select>
+                  <select class="player-suit-1" required>
+                    <option value="">Suit</option>
+                    <option value="spade">♠ Spade</option>
+                    <option value="heart">♥ Heart</option>
+                    <option value="diamond">♦ Diamond</option>
+                    <option value="club">♣ Club</option>
+                  </select>
+                </div>
+
+                <div class="card-input">
+                  <label>Card 2:</label>
+                  <select class="player-rank-2" required>
+                    <option value="">Rank</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="J">J</option>
+                    <option value="Q">Q</option>
+                    <option value="K">K</option>
+                    <option value="A">A</option>
+                  </select>
+                  <select class="player-suit-2" required>
+                    <option value="">Suit</option>
+                    <option value="spade">♠ Spade</option>
+                    <option value="heart">♥ Heart</option>
+                    <option value="diamond">♦ Diamond</option>
+                    <option value="club">♣ Club</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Player 2 -->
+            <div class="player-section" data-player="2">
+              <div class="player-header">
+                <span class="player-title">Player 2</span>
+              </div>
+              <div class="card-input-group">
+                <input
+                  type="text"
+                  class="player-id"
+                  placeholder="Player ID"
+                  value="player2"
+                  required
+                  style="width: 150px"
+                />
+
+                <div class="card-input">
+                  <label>Card 1:</label>
+                  <select class="player-rank-1" required>
+                    <option value="">Rank</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="J">J</option>
+                    <option value="Q">Q</option>
+                    <option value="K">K</option>
+                    <option value="A">A</option>
+                  </select>
+                  <select class="player-suit-1" required>
+                    <option value="">Suit</option>
+                    <option value="spade">♠ Spade</option>
+                    <option value="heart">♥ Heart</option>
+                    <option value="diamond">♦ Diamond</option>
+                    <option value="club">♣ Club</option>
+                  </select>
+                </div>
+
+                <div class="card-input">
+                  <label>Card 2:</label>
+                  <select class="player-rank-2" required>
+                    <option value="">Rank</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="J">J</option>
+                    <option value="Q">Q</option>
+                    <option value="K">K</option>
+                    <option value="A">A</option>
+                  </select>
+                  <select class="player-suit-2" required>
+                    <option value="">Suit</option>
+                    <option value="spade">♠ Spade</option>
+                    <option value="heart">♥ Heart</option>
+                    <option value="diamond">♦ Diamond</option>
+                    <option value="club">♣ Club</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-secondary" onclick="addPlayer()">
+            + Add Player
+          </button>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+          <button type="submit" class="btn btn-primary">🔍 Analyze Outs</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="loadExample()"
+          >
+            📋 Load Example
+          </button>
+        </div>
+      </form>
+
+      <!-- Results Section -->
+      <div id="resultsSection" style="display: none">
+        <div class="results">
+          <div class="results-title">Analysis Results</div>
+          <pre id="jsonOutput" class="json-output"></pre>
+        </div>
+      </div>
+
+      <!-- Error Section -->
+      <div id="errorSection" style="display: none">
+        <div class="error" id="errorMessage"></div>
+      </div>
+    </div>
+
+    <!-- Include the analyzer script -->
+    <script src="texas-holdem-runner-runner.js"></script>
+
+    <script>
+      let playerCount = 2;
+
+      // Load example data
+      function loadExample() {
+        // Board cards
+        const boardRanks = document.querySelectorAll(".board-rank");
+        const boardSuits = document.querySelectorAll(".board-suit");
+
+        boardRanks[0].value = "4";
+        boardSuits[0].value = "heart";
+
+        boardRanks[1].value = "J";
+        boardSuits[1].value = "club";
+
+        boardRanks[2].value = "Q";
+        boardSuits[2].value = "heart";
+
+        // Player 1
+        const player1Section = document.querySelector('[data-player="1"]');
+        player1Section.querySelector(".player-id").value = "player1";
+        player1Section.querySelector(".player-rank-1").value = "5";
+        player1Section.querySelector(".player-suit-1").value = "spade";
+        player1Section.querySelector(".player-rank-2").value = "6";
+        player1Section.querySelector(".player-suit-2").value = "diamond";
+
+        // Player 2
+        const player2Section = document.querySelector('[data-player="2"]');
+        player2Section.querySelector(".player-id").value = "player2";
+        player2Section.querySelector(".player-rank-1").value = "Q";
+        player2Section.querySelector(".player-suit-1").value = "club";
+        player2Section.querySelector(".player-rank-2").value = "9";
+        player2Section.querySelector(".player-suit-2").value = "club";
+      }
+
+      // Add new player
+      function addPlayer() {
+        playerCount++;
+        const playersContainer = document.getElementById("playersContainer");
+
+        const playerDiv = document.createElement("div");
+        playerDiv.className = "player-section";
+        playerDiv.setAttribute("data-player", playerCount);
+        playerDiv.innerHTML = `
+                <div class="player-header">
+                    <span class="player-title">Player ${playerCount}</span>
+                    <button type="button" class="btn btn-danger" onclick="removePlayer(this)">Remove</button>
+                </div>
+                <div class="card-input-group">
+                    <input type="text" class="player-id" placeholder="Player ID" value="player${playerCount}" required style="width: 150px;">
+                    
+                    <div class="card-input">
+                        <label>Card 1:</label>
+                        <select class="player-rank-1" required>
+                            <option value="">Rank</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="J">J</option>
+                            <option value="Q">Q</option>
+                            <option value="K">K</option>
+                            <option value="A">A</option>
+                        </select>
+                        <select class="player-suit-1" required>
+                            <option value="">Suit</option>
+                            <option value="spade">♠ Spade</option>
+                            <option value="heart">♥ Heart</option>
+                            <option value="diamond">♦ Diamond</option>
+                            <option value="club">♣ Club</option>
+                        </select>
+                    </div>
+
+                    <div class="card-input">
+                        <label>Card 2:</label>
+                        <select class="player-rank-2" required>
+                            <option value="">Rank</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="J">J</option>
+                            <option value="Q">Q</option>
+                            <option value="K">K</option>
+                            <option value="A">A</option>
+                        </select>
+                        <select class="player-suit-2" required>
+                            <option value="">Suit</option>
+                            <option value="spade">♠ Spade</option>
+                            <option value="heart">♥ Heart</option>
+                            <option value="diamond">♦ Diamond</option>
+                            <option value="club">♣ Club</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+
+        playersContainer.appendChild(playerDiv);
+      }
+
+      // Remove player
+      function removePlayer(button) {
+        const playerSection = button.closest(".player-section");
+        if (document.querySelectorAll(".player-section").length > 2) {
+          playerSection.remove();
+        } else {
+          alert("You need at least 2 players!");
+        }
+      }
+
+      // Handle form submission
+      document
+        .getElementById("analyzerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          try {
+            // Hide previous results/errors
+            document.getElementById("resultsSection").style.display = "none";
+            document.getElementById("errorSection").style.display = "none";
+
+            // Collect board cards
+            const boardRanks = document.querySelectorAll(".board-rank");
+            const boardSuits = document.querySelectorAll(".board-suit");
+            const boardState = [];
+
+            for (let i = 0; i < boardRanks.length; i++) {
+              if (boardRanks[i].value && boardSuits[i].value) {
+                boardState.push(
+                  createCard(boardRanks[i].value, boardSuits[i].value),
+                );
+              }
+            }
+
+            if (boardState.length < 3) {
+              throw new Error("You must enter at least 3 board cards (Flop)");
+            }
+
+            if (boardState.length > 4) {
+              throw new Error("Maximum 4 board cards allowed (Turn)");
+            }
+
+            // Collect players
+            const playerSections = document.querySelectorAll(".player-section");
+            const players = [];
+
+            playerSections.forEach((section) => {
+              const playerId = section.querySelector(".player-id").value;
+              const rank1 = section.querySelector(".player-rank-1").value;
+              const suit1 = section.querySelector(".player-suit-1").value;
+              const rank2 = section.querySelector(".player-rank-2").value;
+              const suit2 = section.querySelector(".player-suit-2").value;
+
+              if (!rank1 || !suit1 || !rank2 || !suit2) {
+                throw new Error(
+                  `Player ${playerId}: All card fields must be filled`,
+                );
+              }
+
+              players.push({
+                id: playerId,
+                cards: [createCard(rank1, suit1), createCard(rank2, suit2)],
+              });
+            });
+
+            if (players.length < 2) {
+              throw new Error("You must have at least 2 players");
+            }
+
+            // Check for duplicate cards
+            const allCards = [
+              ...boardState,
+              ...players.flatMap((p) => p.cards),
+            ];
+            const cardStrings = allCards.map((c) => `${c.rank}${c.suit}`);
+            const duplicates = cardStrings.filter(
+              (item, index) => cardStrings.indexOf(item) !== index,
+            );
+
+            if (duplicates.length > 0) {
+              throw new Error(
+                `Duplicate cards detected: ${duplicates.join(", ")}`,
+              );
+            }
+
+            // Run analysis
+            const results = analyzeOuts(boardState, players);
+
+            // Filter out the detailed outs arrays to make output cleaner
+            const filteredResults = {
+              ...results,
+              playerResults: results.playerResults.map((player) => {
+                const { regularOuts, runnerRunnerOuts, ...rest } = player;
+                return rest;
+              }),
+            };
+
+            // Display results
+            document.getElementById("jsonOutput").textContent = JSON.stringify(
+              filteredResults,
+              null,
+              2,
+            );
+            document.getElementById("resultsSection").style.display = "block";
+
+            // Scroll to results
+            document
+              .getElementById("resultsSection")
+              .scrollIntoView({ behavior: "smooth" });
+          } catch (error) {
+            document.getElementById("errorMessage").textContent = error.message;
+            document.getElementById("errorSection").style.display = "block";
+            document
+              .getElementById("errorSection")
+              .scrollIntoView({ behavior: "smooth" });
+          }
+        });
+    </script>
+  </body>
+</html>
