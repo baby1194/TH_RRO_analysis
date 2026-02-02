@@ -1203,6 +1203,7 @@ function analyzeOuts(boardState, players) {
     totalCombinations: 0,
     totalTurnCombinations: 0,
     tieCount: 0,
+    tiePercentage: 0,
     playerResults: players.map((player, index) => ({
       playerId: player.id || index,
       regularOuts: [],
@@ -1303,6 +1304,9 @@ function analyzeOuts(boardState, players) {
         (playerResult.runnerRunnerWinCount / results.totalCombinations) * 100;
     });
 
+    results.tiePercentage =
+      (results.tieCount / results.totalCombinations) * 100;
+
     // Find the winner (highest regular win percentage)
     const winner = results.playerResults.reduce((best, current) =>
       current.regularWinPercentage > best.regularWinPercentage ? current : best
@@ -1393,6 +1397,9 @@ function analyzeOuts(boardState, players) {
       playerResult.runnerRunnerWinPercentage = 0; // No runner-runner analysis on turn
     });
 
+    results.tiePercentage =
+      (results.tieCount / results.totalTurnCombinations) * 100;
+
     // Find the winner (highest regular win percentage)
     const winner = results.playerResults.reduce((best, current) =>
       current.regularWinPercentage > best.regularWinPercentage ? current : best
@@ -1435,6 +1442,7 @@ function analyzeRunnerRunnerOuts(boardState, players) {
   return {
     totalCombinations: results.totalCombinations,
     tieCount: results.tieCount,
+    tiePercentage: results.tiePercentage,
     playerResults: results.playerResults.map((player) => ({
       playerId: player.playerId,
       runnerRunnerOuts: player.runnerRunnerOuts,
