@@ -477,27 +477,13 @@ class RegularOutsDescriber {
       }
     }
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Four of a Kind)`;
+    return `Any ${cards.join(", ")}(Four of a Kind)`;
   }
 
   static describeFullHouse(cards, rankCounts) {
     if (cards.length === 0) return null;
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Full House)`;
+    return `Any ${cards.join(", ")}(Full House)`;
   }
 
   static describeFlush(cards, suitCounts) {
@@ -522,14 +508,7 @@ class RegularOutsDescriber {
   static describeStraight(cards) {
     if (cards.length === 0) return null;
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Straight)`;
+    return `Any ${cards.join(", ")}(Straight)`;
   }
 
   static describeThreeOfAKind(cards, rankCounts) {
@@ -542,40 +521,19 @@ class RegularOutsDescriber {
       }
     }
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Three of a Kind)`;
+    return `Any ${cards.join(", ")}(Three of a Kind)`;
   }
 
   static describeTwoPair(cards, rankCounts) {
     if (cards.length === 0) return null;
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Two Pair)`;
+    return `Any ${cards.join(", ")}(Two Pair)`;
   }
 
   static describePair(cards, rankCounts) {
     if (cards.length === 0) return null;
 
-    const neededRanks = new Set();
-    cards.forEach((card) => {
-      const rank = card.replace(/[♠♥♦♣]/, "");
-      neededRanks.add(rank);
-    });
-
-    const ranks = Array.from(neededRanks);
-    return `Any ${ranks.join(", ")}(Pair)`;
+    return `Any ${cards.join(", ")}(Pair)`;
   }
 }
 

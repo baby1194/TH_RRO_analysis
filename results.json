@@ -3,6 +3,7 @@
   "totalCombinations": 990,
   "totalTurnCombinations": 45,
   "tieCount": 0,
+  "tiePercentage": 0,
   "playerResults": [
     {
       "playerId": "player1",
